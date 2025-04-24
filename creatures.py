@@ -11,17 +11,22 @@ class Creatures:
     def creature_presentation (self):
 
         if self.special_ability == "dmg2":
-            description_special_ability = "dégâts x2"
+            description_special_ability = "⚔️ Dégâts x2"
 
         elif self.special_ability == "dmg3":
-            description_special_ability = "dégâts x3"
+            description_special_ability = "🔥 Dégâts x3"
 
         else:
-            description_special_ability = "Mort instantannée de la créature adverse"
+            description_special_ability = "💀 Mort instantanée de la créature adverse"
 
-        print(f"Je suis {self.name}. {self.presentation}")
-        print(f"J'ai {self.hp} points de vie parce que je suis level {self.level} et mon attaque spéciale est: \n⚡ {description_special_ability} \n")
-
+        print("══════════════════════════════════════════════")
+        print(f"🌟 Nom : {self.name}")
+        print("──────────────────────────────────────────────")
+        print(f"🧬 Présentation :\n→ {self.presentation}\n")
+        print(f"💖 PV : {self.hp}     🎚️ Niveau : {self.level}")
+        print(f"🗡️ Attaque : {self.attack}")
+        print(f"✨ Compétence spéciale : {description_special_ability}")
+        print("══════════════════════════════════════════════\n")
 
 creature1 = Creatures ("Flamouron 🐉", 5, 1, "Brasier final","dmg2"
                       ,"Né des braises d’un volcan endormi, Flamouron crache le feu de l’ancienne colère des dragons.🐉")
