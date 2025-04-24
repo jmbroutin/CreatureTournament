@@ -5,7 +5,7 @@ from utils import *
 
 class Tournament:
     def __init__(self):
-        self.name = "L'Academie des Invocateurs"
+        self.name = "L'Academie  des Invocateurs"
         self.first_semi_final = []
         self.second_semi_final = []
         self.small_final = []
