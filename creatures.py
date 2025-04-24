@@ -17,7 +17,7 @@ class Creatures:
             description_special_ability = "dégâts x3"
 
         else:
-            description_special_ability = "Mort instantannée de la créature adverse"
+            description_special_ability = "Mort instantanée de la créature adverse"
 
         print(f"Je suis {self.name}. {self.presentation}")
         print(f"J'ai {self.hp} points de vie parce que je suis level {self.level} et mon attaque spéciale est: \n⚡ {description_special_ability} \n")
@@ -60,6 +60,6 @@ creature12 = Creatures("Obscurys 👻", 9, 3, "Phasage spectral", "kill",
                        "Obscurys ne vit pas. Il rôde. Entre les ombres. Entre deux mondes.")
 
 
-creature1.creature_presentation()
-creature2.creature_presentation()
-creature3.creature_presentation()
+# creature1.creature_presentation()
+# creature2.creature_presentation()
+# creature3.creature_presentation()
