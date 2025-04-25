@@ -1,5 +1,6 @@
 import time
 from utils import *
+from participant import *
 
 
 
@@ -47,24 +48,47 @@ class Tournament:
         print(first_fighter)
         time.sleep(3)
         while turn > 0:
-            self.fight_turn(first_fighter,turn,player1,player2)
+            self.fight_turn(first_fighter,turn,player1.name,player2.name)
             turn -= 1
 
 tournament = Tournament()
 tournament.show_title()
 time.sleep(2)
 print("Bienvenue à l'Academie des Invocateurs !!!")
-playsound('C:/Users/s_13508_dev/PycharmProjects/PythonProject/CreatureTournament/Sounds/cinematic-intro-6097.mp3')
-time.sleep(11)
+# playsound('C:/Users/s_13508_dev/PycharmProjects/PythonProject/CreatureTournament/Sounds/cinematic-intro-6097.mp3')
+# time.sleep(11)
+
+# Choix des écoles pour la première demi-finale
+tournament.first_semi_final.append(random.choice(tournament_school_list))
+tournament_school_list.remove(tournament.first_semi_final[0])
+tournament.first_semi_final.append(random.choice(tournament_school_list))
+tournament_school_list.remove(tournament.first_semi_final[1])
+
+# Choix des écoles pour la deuxième demi-finale
+tournament.second_semi_final.append(random.choice(tournament_school_list))
+tournament_school_list.remove(tournament.second_semi_final[0])
+tournament.second_semi_final.append(random.choice(tournament_school_list))
+tournament_school_list.remove(tournament.second_semi_final[1])
+
+print("-----Première demi-finale-----\n")
+for i, school in enumerate(tournament.first_semi_final):
+    print(f"{school.school_name} \n")
+print("-----Deuxième demi-finale-----\n")
+for i, school in enumerate(tournament.second_semi_final):
+    print(f"{school.school_name} \n")
+
 # Attribution des créatures et Présentation (participants et créatures)
-# Tirage au sort des demi-finales
+
 # Première demi-finale
+tuple = random.choice(tournament.first_semi_final[0].creatures),random.choice(tournament.first_semi_final[1].creatures)
+tournament.fight(tuple[0],tuple[1])
+
 # Deuxième demi-finale
 # Petite finale
 # Grande finale
 #Annonce du grand gagnant et classement final
-print("Que le combat commence !!!")
-playsound('C:/Users/s_13508_dev/PycharmProjects/PythonProject/CreatureTournament/Sounds/fight.mp3')
-time.sleep(3)
-tournament.fight("Xavier","J-M")
+# print("Que le combat commence !!!")
+# playsound('C:/Users/s_13508_dev/PycharmProjects/PythonProject/CreatureTournament/Sounds/fight.mp3')
+# time.sleep(3)
+# tournament.fight("Xavier","J-M")
 

@@ -10,9 +10,9 @@ class Participant:
         self.victory = victory
 
 class School:
-    def __init__(self, school_name, participant,creatures):
+    def __init__(self, school_name, participant,creatures:list[Creatures]):
         self.school_name = school_name
-        self.list_creature = []
+        self.creatures = creatures
 
 p1 = Participant("Pepper","L'explorateur culinaire",creature3.name,random.randint(1,20))
 p2 = Participant("Jacq","Le prof de biologie énergique",creature6.name,random.randint(1,20))
@@ -24,5 +24,6 @@ school2 = School("École des Maîtres Invocateurs",p2,[creature4,creature5,creat
 school3 = School("Institut des Arts Occultes",p3,[creature7,creature8,creature9])
 school4 = School("Collège des Envouteurs",p4,[creature10,creature11,creature12])
 
+tournament_school_list = [school1,school2,school3,school4]
 print(p1.favorite_creature)
 creature10.creature_presentation()
