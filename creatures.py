@@ -8,17 +8,18 @@ class Creatures:
         self.special_ability = special_ability
         self.presentation = presentation
 
-    def lose_life (self, creature1, creature2, turn):
+
+    def lose_life (self, first_creature, second_creature, turn):
         if turn == 2:
-            match creature1.special_ability:
+            match first_creature.special_ability:
                 case 'dmg2':
-                    creature2.hp -= 2
+                    second_creature.hp = max(0,second_creature.hp - 2)
                 case 'dmg3':
-                    creature2.hp -= 3
+                    second_creature.hp = max(0,second_creature.hp - 3)
                 case 'kill':
-                    creature2.hp = 0
+                    second_creature.hp = 0
         else:
-            creature2.hp -= 1
+            second_creature.hp -= 1
 
 
     def creature_presentation (self):
@@ -78,6 +79,6 @@ creature12 = Creatures("Obscurys 👻", 9, 3, "Phasage spectral", "kill",
                        "Obscurys ne vit pas. Il rôde. Entre les ombres. Entre deux mondes.")
 
 
-creature1.creature_presentation()
-creature2.creature_presentation()
-creature3.creature_presentation()
+# creature1.creature_presentation()
+# creature2.creature_presentation()
+# creature3.creature_presentation()
