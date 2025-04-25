@@ -8,6 +8,19 @@ class Creatures:
         self.special_ability = special_ability
         self.presentation = presentation
 
+    def lose_life (self, creature1, creature2, turn):
+        if turn == 2:
+            match creature1.special_ability:
+                case 'dmg2':
+                    creature2.hp -= 2
+                case 'dmg3':
+                    creature2.hp -= 3
+                case 'kill':
+                    creature2.hp = 0
+        else:
+            creature2.hp -= 1
+
+
     def creature_presentation (self):
 
         if self.special_ability == "dmg2":
