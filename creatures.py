@@ -1,3 +1,5 @@
+from utils import *
+
 
 class Creatures:
     def __init__(self, name, hp, level, attack, special_ability, presentation):
@@ -11,6 +13,7 @@ class Creatures:
 
     def lose_life (self, first_creature, second_creature, turn):
         if turn == 2:
+
             match first_creature.special_ability:
                 case 'dmg2':
                     second_creature.hp = max(0,second_creature.hp - 2)
@@ -18,6 +21,8 @@ class Creatures:
                     second_creature.hp = max(0,second_creature.hp - 3)
                 case 'kill':
                     second_creature.hp = 0
+                    playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/finish_him.mp3')
+
         else:
             second_creature.hp -= 1
 

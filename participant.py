@@ -25,5 +25,3 @@ school3 = School("Institut des Arts Occultes",p3,[creature7,creature8,creature9]
 school4 = School("Collège des Envouteurs",p4,[creature10,creature11,creature12])
 
 tournament_school_list = [school1,school2,school3,school4]
-print(p1.favorite_creature)
-creature10.creature_presentation()
