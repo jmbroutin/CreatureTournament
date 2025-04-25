@@ -21,7 +21,7 @@ class Creatures:
                     second_creature.hp = max(0,second_creature.hp - 3)
                 case 'kill':
                     second_creature.hp = 0
-                    playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/finish_him.mp3')
+                    playsound('Sounds/finish_him.mp3')
 
         else:
             second_creature.hp -= 1

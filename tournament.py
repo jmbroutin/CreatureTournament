@@ -48,7 +48,7 @@ class Tournament:
                     print(f"❤️ PV de {second_player.name}: {second_player.hp}")
             elif defense > attack:
                 print("\n🔰 La défense a paré l'attaque!!!")
-                playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/woshbetter.wav')
+                playsound('Sounds/woshbetter.wav')
                 time.sleep(1.5)
             else:
                 print("\n⚖️ Égalité!!! Nouvelle tentative...")
@@ -100,7 +100,7 @@ class Tournament:
 tournament = Tournament()
 tournament.show_title()
 time.sleep(2)
-playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/cinematic-intro-6097.mp3')
+playsound('Sounds/cinematic-intro-6097.mp3')
 print("\n✨ Bienvenue à l'Académie des Invocateurs ! ✨")
 time.sleep(2)
 
@@ -153,7 +153,7 @@ time.sleep(3)
 print("\n" + "⚡" * 20)
 print("⚡ PREMIÈRE DEMI-FINALE ⚡")
 print("⚡" * 20)
-playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/fight.mp3')
+playsound('Sounds/fight.mp3')
 
 first_semi_final_creatures = [random.choice(tournament.first_semi_final[0].creatures),
                               random.choice(tournament.first_semi_final[1].creatures)]
@@ -179,7 +179,7 @@ first_semi_final_creatures[1].hp = first_semi_final_creatures_hp[1]
 print("\n" + "⚡" * 20)
 print("⚡ DEUXIÈME DEMI-FINALE ⚡")
 print("⚡" * 20)
-playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/fight.mp3')
+playsound('Sounds/fight.mp3')
 
 second_semi_final_creatures = [random.choice(tournament.second_semi_final[0].creatures),
                                random.choice(tournament.second_semi_final[1].creatures)]
@@ -205,7 +205,7 @@ second_semi_final_creatures[1].hp = second_semi_final_creatures_hp[1]
 print("\n" + "🌠" * 20)
 print("🌠 PETITE FINALE 🌠")
 print("🌠" * 20)
-playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/fight.mp3')
+playsound('Sounds/fight.mp3')
 
 small_final_creatures = [random.choice(tournament.small_final[0].creatures),
                          random.choice(tournament.small_final[1].creatures)]
@@ -231,7 +231,7 @@ small_final_creatures[1].hp = small_final_creatures_hp[1]
 print("\n" + "🌟" * 20)
 print("🌟 GRANDE FINALE 🌟")
 print("🌟" * 20)
-playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/fight.mp3')
+playsound('Sounds/fight.mp3')
 
 final_creatures = [random.choice(tournament.final[0].creatures),
                    random.choice(tournament.final[1].creatures)]
@@ -257,7 +257,7 @@ final_creatures[1].hp = final_creatures_hp[1]
 print("\n" + "⭐" * 50)
 print("🏆 CLASSEMENT FINAL DU TOURNOI 🏆")
 print("⭐" * 50)
-playsound('C:/Users/apoll/OneDrive/Formation_Python/CreatureTournament/Sounds/victory.mp3')
+playsound('Sounds/victory.mp3')
 time.sleep(2)
 print(f"""
 🥇 1ère place: {tournament.ranking[2][0]}
