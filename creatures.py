@@ -1,3 +1,5 @@
+import time
+
 from utils import *
 
 
@@ -22,6 +24,7 @@ class Creatures:
                 case 'kill':
                     second_creature.hp = 0
                     playsound('Sounds/finish_him.mp3')
+                    time.sleep(2.5)
 
         else:
             second_creature.hp -= 1
